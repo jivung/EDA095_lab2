@@ -8,8 +8,6 @@ public class MailboxLauncher {
 		for (int i = 0; i < 10; i++) {
 			new SendMessageThread("Tråd" + new Integer(i).toString(), inbox).start();
 		}
-		
-		new GetMessagesThread(inbox).start();
-		
+		new GetMessagesThread(inbox).start();		
 	}
 }
