@@ -18,7 +18,9 @@ public class ClientSender extends Thread {
 		
 		while(true){
 			try {
-				outputStream.write(scanner.next().getBytes());
+				String msg = scanner.next();
+				msg = msg + "\n";
+				outputStream.write(msg.getBytes());
 				outputStream.flush();
 			} catch (IOException e) {
 				e.printStackTrace();

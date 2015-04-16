@@ -20,6 +20,7 @@ public class Mailbox {
 	 *            the message to be stored.
 	 */
 	public synchronized void storeMessage(String msg) {
+		System.out.println("messsage: " + msg);
 		inbox.add(msg);
 		notifyAll();
 	}
@@ -54,8 +55,6 @@ public class Mailbox {
 				e.printStackTrace();
 			}
 		}
-		while (!inbox.isEmpty()) {
-			return inbox.remove(inbox.size() - 1);
-		}
+		return inbox.remove(inbox.size() - 1);
 	}
 }

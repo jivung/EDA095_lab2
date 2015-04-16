@@ -24,7 +24,6 @@ public class Client {
 		this.connect();
 		new ClientSender(outputStream).start();
 		new ClientReceiver(inputStream).start();
-		System.out.println("jorpd");
 	}
 
 	private void connect() {

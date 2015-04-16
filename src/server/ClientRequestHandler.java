@@ -68,6 +68,7 @@ public class ClientRequestHandler extends Thread {
 	 * Send a msg to the mailbox (or echo to oneself).
 	 */
 	private void sendMsg() {
+		System.out.println("Väntar på input..");
 		String msg = new String();
 		int b;
 		while (true) {

@@ -31,6 +31,7 @@ public class ClientManager {
 	 *            the RequestHandler
 	 */
 	public void connect(ClientRequestHandler rh) {
+		rh.start();
 		handlers.add(rh);
 	}
 

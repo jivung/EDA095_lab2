@@ -19,7 +19,7 @@ public class ChatServer {
 	public ChatServer() {
 		cm = new ClientManager();
 		mailbox = new Mailbox();
-		new DisplayHandler(cm, mailbox);
+		new DisplayHandler(cm, mailbox).start();
 		try {
 			serverSocket = new ServerSocket(portNbr);
 		} catch (IOException e) {
